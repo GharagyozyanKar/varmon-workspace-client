@@ -1,0 +1,51 @@
+@use "/src/styles/variables.scss" as *;
+
+.container {
+    grid-area: yearly_cases;
+    height: 100%;
+    color: $blue-dark;
+    background: $white;
+    border-radius: $border-radius-sm;
+    display: flex;
+    flex-direction: column;
+    gap: $gap-sm;
+    min-width: 0; 
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.chartWrapper {
+    flex: 1;
+    
+    :global(.recharts-cartesian-axis-tick-line) {
+        stroke: #8B909D !important;
+        opacity: 0.7 !important;
+    }
+}
+
+
+
+.tooltip {
+    background-color: $white;
+    border: none;
+    box-shadow: $shadow-primary;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.tooltip_label {
+    color: $blue-dark;
+    margin: 0 0 8px 0;
+    font-weight: 600;
+}
+
+.tooltip_data {
+    color: $blue-light;
+    margin: 4px 0;
+    font-weight: 500;
+}

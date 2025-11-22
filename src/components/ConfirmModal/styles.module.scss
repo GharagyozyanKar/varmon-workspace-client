@@ -1,0 +1,26 @@
+@use '/src/styles/variables.scss' as *;
+
+.content {
+    max-width: 500px;
+    background-color: $white;
+    padding: $padding-y $padding-x;
+    border-radius: $border-radius-lg;
+    display: flex;
+    flex-direction: column;
+    gap: $gap-md; 
+
+    .title {
+        text-align: center;
+    }
+
+    .actions {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: $gap-lg;
+
+        & button {
+            width: 70px;
+        }
+    }
+}

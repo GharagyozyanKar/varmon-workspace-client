@@ -1,0 +1,37 @@
+@use '../../../styles/variables' as *;
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: $gap-md;
+        flex: 1; 
+    }
+
+    .header {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: $gap-sm;
+
+        .add_btn {
+            display: flex;
+            align-items: center;
+            gap: $gap-sm;
+        }
+    }
+
+    .cases {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: $gap-md;
+        overflow-y: auto; 
+        width: 100%;
+    }
+}

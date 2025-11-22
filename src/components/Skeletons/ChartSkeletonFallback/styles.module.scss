@@ -1,0 +1,29 @@
+@use "/src/styles/variables.scss" as *;
+
+.container {
+  height: 100%;
+  background: $white;
+  border-radius: $border-radius-sm;
+  color: $blue-dark;
+  display: flex;
+  flex-direction: column;
+  gap: $gap-sm;
+  min-width: 0;
+
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .chartWrapper {
+    flex: 1;
+    
+    :global(.recharts-cartesian-axis-tick-line) {
+      stroke: #8B909D !important;
+      opacity: 0.7 !important;
+    }
+  }
+}
+

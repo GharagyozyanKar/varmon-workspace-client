@@ -1,0 +1,12 @@
+@use "/src/styles/variables.scss" as *;
+
+.wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: minmax(100px, auto) minmax(300px, auto);
+    grid-template-areas:
+    "info change-password"
+    "stats yearly_cases";
+    gap: $gap-md;
+    align-items: stretch;
+}

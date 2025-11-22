@@ -1,0 +1,110 @@
+@use '../../../../../styles/variables.scss' as *;
+
+.expenditures {
+    width: 100%;
+    height: 300px;
+    border: 1px solid $grey-light;
+    border-radius: $border-radius-sm;
+    padding: $padding-sm;
+    display: flex;
+    flex-direction: column;
+    gap: $gap-sm;
+
+    .total {
+        border-top: 1px solid $grey-light;
+        display: flex;
+        justify-content: end;
+        padding: $padding-sm 0;
+    }
+
+    .expendituresList {
+        display: flex;
+        flex-direction: column;
+        gap: $gap-md;
+        padding: 20px 5px;
+        height: 100%;
+        overflow-y: auto;
+
+
+
+
+        .emptyList {
+            font-size: 1rem;
+            color: $grey;
+            min-height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .expenditure {
+            background-color: $blue-bg;
+            display: flex;
+            justify-content: space-between;
+            border-radius: $border-radius-sm;
+            padding: $padding-sm;
+            position: relative;
+
+            &>p {
+                width: 80%;
+                word-break: break-word;
+                overflow-wrap: break-word;
+            }
+
+            .amount {
+                position: absolute;
+                top: -1rem;
+                left: 0;
+                background-color: $blue-dark;
+                color: $white;
+                font-size: 12px;
+                padding: 5px;
+                border-radius: $border-radius-sm;
+                min-width: 50px;
+            }
+
+            .delete {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: rgb(144, 1, 1);
+                
+                &>svg {
+                    cursor: pointer;
+                    transition: 0.3s;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+        }
+    }
+
+    .actions {
+        display: flex;
+        gap: $gap-sm;
+        align-items: center;
+
+        .btn {
+            height: 40px;
+            font-size: 18px;
+        }
+
+        .description {
+            width: 70%;
+        }
+
+        .amount {
+            width: 30%;
+        }
+
+
+    }
+
+    .title {
+        font-weight: bold;
+        font-size: 1rem;
+        text-align: center;
+    }
+}

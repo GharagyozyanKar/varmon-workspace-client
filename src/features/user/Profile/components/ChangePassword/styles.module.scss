@@ -1,0 +1,21 @@
+@use "/src/styles/variables.scss" as *;
+
+.wrapper {
+    grid-area: "change-password";
+    display: flex;
+    flex-direction: column;
+    gap: $gap-md;
+    align-items: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: $gap-md;
+    width: 70%;
+
+    .actions {
+        display: flex;
+        justify-content: end;
+    }
+}

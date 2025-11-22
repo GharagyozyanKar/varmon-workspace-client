@@ -1,0 +1,28 @@
+@use "/src/styles/variables.scss" as *;
+
+.info {
+    grid-area: info;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: $gap-md;
+    align-items: center;
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: $gap-md;
+        position: relative;
+        width: 100%;
+
+        .field {
+            width: 100%;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: end;
+        }
+    }
+}

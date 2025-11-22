@@ -1,0 +1,106 @@
+@use './breakpoints.scss' as *;
+@use './variables.scss' as *;
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #60A5FA;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #1E3A8A;
+  }
+
+  scrollbar-width: thin;
+  scrollbar-color: #60A5FA #F7FBFF;
+}
+
+html,
+body {
+  font-family: Arial;
+  height: 100%;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: $blue-dark;
+  background-color: $blue-bg;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+:focus {
+  outline: none;
+}
+
+.container {
+  width: 95%;
+  margin-inline: auto;
+}
+
+;
+
+
+
+.title {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.box {
+  background-color: $white;
+  padding: $padding-y $padding-x;
+  border-radius: $border-radius-sm;
+  box-shadow: $shadow-primary;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.truncate {
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

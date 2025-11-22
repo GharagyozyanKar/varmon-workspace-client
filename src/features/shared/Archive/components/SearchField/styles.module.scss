@@ -1,0 +1,20 @@
+@use '/src/styles/variables.scss' as *;
+
+.search {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+}
+
+.helperIcon {
+    display: flex;
+    align-items: center;
+    cursor: help;
+    color: rgba(0, 0, 0, 0.6);
+    flex-shrink: 0;
+    
+    &:hover {
+        color: rgba(0, 0, 0, 0.8);
+    }
+}

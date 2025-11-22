@@ -1,0 +1,113 @@
+@use '../../../styles/variables.scss' as *;
+
+.loading {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    overflow-y: auto;
+    height: 95%;
+    padding-right: $padding-x;
+    display: flex;
+    flex-direction: column;
+    gap: $gap-lg;
+
+
+    .caseHeader {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: $gap-md;
+
+        & .caseNumber {
+            font-size: $font-size-lg;
+            font-weight: bold;
+        }
+
+        & .statusWrapper {
+            display: flex;
+            gap: $gap-sm;
+            align-items: center;
+
+            & .closedAt {
+                color: $grey;
+            }
+        }
+    }
+
+    .mainInfo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: $gap-lg;
+
+    }
+
+    .secondaryInfo {
+        display: flex;
+        justify-content: space-between;
+        gap: $gap-md;
+
+        .expenditures {
+            flex: 0 0 60%;
+            min-width: 0;
+            max-width: 600px;
+        }
+
+        .assignedEmployee {
+            flex: 0 0 35%;
+            min-width: 0;
+            max-width: 400px;
+        }
+
+    }
+
+    .caseFooter {
+        display: flex;
+        justify-content: end;
+        gap: $gap-sm;
+        padding: 10px 0;
+    }
+
+    .files {
+        display: flex;
+        flex-direction: column;
+        gap: $gap-sm;
+
+        .filesContent {
+            display: flex;
+            gap: $gap-sm;
+
+            .fileUploader {
+                display: flex;
+                flex-direction: column;
+                gap: $gap-sm;
+                width: 40%;
+                min-width: 300px;
+                border: 1px solid $grey-light;
+                border-radius: $border-radius-sm;
+                padding: $padding-sm;
+            }
+
+            .caseFiles {
+                display: flex;
+                flex-direction: column;
+                gap: $gap-sm;
+                width: 60%;
+                border: 1px solid $grey-light;
+                border-radius: $border-radius-sm;
+                padding: $padding-sm;
+                max-height: 150px;
+                overflow-y: auto;
+            }
+
+            .filesTitle {
+                font-size: $font-size-sm;
+                color: $grey;
+            }
+        }
+    }
+}

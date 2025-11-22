@@ -1,0 +1,40 @@
+@use "/src/styles/variables.scss" as *;
+
+.caseItem {
+    width: 250px;
+    min-height: 200px;
+    border-radius: $border-radius-sm;
+    padding: $padding-sm;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    display: flex;
+    flex-direction: column;
+    gap: $gap-md;
+    justify-content: space-between;
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid $grey-light;
+        padding-bottom: $padding-sm;
+    }
+
+    .icon_wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .footer {
+        .info {
+            display: flex;
+            gap: $gap-sm;
+            margin-bottom: $gap-sm;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

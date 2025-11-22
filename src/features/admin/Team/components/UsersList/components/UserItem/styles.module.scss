@@ -1,0 +1,136 @@
+@use "/src/styles/variables.scss" as *;
+
+.wrapper {
+    width: 100%;
+    background-color: $blue-lightest;
+    border-radius: $border-radius-sm;
+    padding: 15px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: $gap-md;
+        
+
+        .body {
+            display: flex;
+            .menu {
+
+                &_icon_wrapper {
+                    transition: 0.3s;
+                    border-radius: $border-radius-sm $border-radius-sm 0 0;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+
+                    &_text {
+                        font-size: 12px;
+                        color: $grey;
+                    }
+                }
+
+                &_icon {
+                    color: $blue-dark;
+                    font-size: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                 &_item {
+                     display: flex;
+                     align-items: center;
+                     gap: 8px;
+                     
+                     &:focus-visible {
+                         background-color: transparent !important;
+                     }
+                 }
+            }
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                gap: $gap-sm;
+                flex: 1;
+
+                &_title {
+                    color: $grey;
+                }
+
+                &_item {
+                    color: $blue-dark;
+                    margin-left: 5px;
+                }
+
+                &_email {
+                    text-decoration: underline;
+                }
+            }
+
+            .name {
+                font-weight: 600;
+            }
+        }
+
+         .footer {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             
+             &.footer_no_status {
+                 justify-content: flex-end;
+             }
+             
+             .status {
+                font-size: $font-size-sm;
+                color: $red;
+             }
+             
+             .more {
+                 transition: 0.2s;
+                 text-decoration: none;
+                 color: $blue-light;
+                 font-size: $font-size-sm;
+                 cursor: pointer;
+
+                 &:hover {
+                     color: $blue-dark;
+                 }
+             }
+         }
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        gap: $gap-sm;
+
+        &_title {
+            color: $grey;
+        }
+
+        &_item {
+            color: $blue-dark;
+            margin-left: 5px;
+        }
+
+        &_email {
+            text-decoration: underline;
+        }
+    }
+
+    .name {
+        font-weight: 600;
+    }
+
+    
+    
+}
+

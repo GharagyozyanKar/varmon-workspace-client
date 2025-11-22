@@ -1,0 +1,56 @@
+@use "/src/styles/variables.scss" as *;
+
+.wrapper {
+  .content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: minmax(300px, auto) minmax(300px, auto);
+    grid-template-areas:
+      "stats yearly_profit"
+      "yearly_cases unpaid_cases"
+      "completed_cases completed_cases";
+    gap: $gap-md;
+    align-items: stretch;
+
+    > * {
+      height: 100%;
+      min-height: 300px;
+      width: 100%;
+      max-width: none;
+    }
+
+    @media (max-width: 1200px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, minmax(300px, auto));
+      gap: $gap-md;
+      grid-template-areas:
+        "stats"
+        "yearly_profit"
+        "yearly_cases"
+        "unpaid_cases"
+        "completed_cases";
+
+      > * {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      gap: $gap-sm;
+      
+      > * {
+        min-height: 280px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      gap: $gap-sm;
+      
+      > * {
+        min-height: 260px;
+      }
+    }
+  }
+}

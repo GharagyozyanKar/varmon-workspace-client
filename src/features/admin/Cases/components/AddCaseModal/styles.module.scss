@@ -1,0 +1,37 @@
+@use '/src/styles/variables.scss' as *;
+
+.content {
+  padding: $padding-y $padding-x;
+  min-width: 700px;
+  max-width: 1000px;
+  height: 600px;
+  background-color: $white;
+  border-radius: $border-radius-lg;
+  display: flex;
+  flex-direction: column;
+  gap: $gap-lg;
+  overflow-y: auto;
+
+  .main_title {
+    font-size: $font-size-lg;
+    font-weight: 600;
+  }
+
+  .main_info {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-lg;
+  }
+
+  .additional_info {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-lg;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: $gap-md;
+  }
+}

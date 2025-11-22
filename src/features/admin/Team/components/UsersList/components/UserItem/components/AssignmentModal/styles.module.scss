@@ -1,0 +1,33 @@
+@use "/src/styles/variables.scss" as *;
+
+.modal_content {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-sm;
+    min-width: 700px;
+    padding: $padding-y $padding-x;
+
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: $padding-sm;
+
+
+        .add_btn {
+            display: flex;
+            align-items: center;
+            gap: $gap-sm;
+        }
+    }
+
+    .cases {
+        max-height: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: $gap-sm;
+        overflow-y: auto;
+        padding: $padding-sm;
+    }
+}

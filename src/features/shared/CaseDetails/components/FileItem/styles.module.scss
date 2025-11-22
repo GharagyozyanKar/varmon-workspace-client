@@ -1,0 +1,53 @@
+@use '../../../../../../src/styles/variables.scss' as *;
+
+.fileItem {
+    padding: $padding-sm;
+    border-radius: $border-radius-sm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $blue-bg;
+    transition: 0.2s;
+    
+    &.loadingItem {
+        background-color: $grey-light;
+    }
+
+    .fileName {
+        font-size: $font-size-sm;
+        font-weight: bold;
+    }
+
+    .actions {
+        display: flex;
+        gap: $gap-sm;
+        font-size: 20px;
+
+        
+
+        .delete,
+        .download {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        .delete {
+            color: $red;
+            font-size: 18px;
+        }
+
+
+        // .delete {
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+        // }
+    }
+}

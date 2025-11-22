@@ -1,0 +1,24 @@
+@use "/src/styles/variables.scss" as *;
+
+.cases {
+    grid-area: current_cases;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    gap: $gap-md;
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cases_current {
+        display: flex;
+        flex-direction: column;
+        gap: $gap-sm;
+        padding: $padding-sm;
+    }
+}

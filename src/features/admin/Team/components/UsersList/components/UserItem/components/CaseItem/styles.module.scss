@@ -1,0 +1,52 @@
+@use "/src/styles/variables.scss" as *;
+
+.case_item {
+    background: $white;
+    border-radius: $border-radius-sm;
+    padding: $padding-sm;
+    display: flex;
+    align-items: center;
+    gap: $gap-md;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+
+.column {
+    flex: 0;
+    min-width: 1;
+}
+
+.text {
+    display: block;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: $blue-dark;
+    font-size: 14px;
+}
+
+.assigned_btn {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: $gap-sm;
+    margin-left: auto;
+
+    .done_button {
+        background: $blue-light;
+        border: none;
+        border-radius: 50%;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: $white;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            background: $blue-dark;
+        }
+    }
+}

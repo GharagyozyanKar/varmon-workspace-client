@@ -1,0 +1,22 @@
+@use "/src/styles/variables.scss" as *;
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-md;
+}
+.cases {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-sm;
+
+    .emptyState {
+
+        .emptyText {
+            font-size: 16px;
+            font-weight: 500;
+            color: $grey;
+        }
+    }
+}

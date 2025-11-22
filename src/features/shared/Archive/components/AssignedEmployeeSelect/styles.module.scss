@@ -1,0 +1,7 @@
+@use '/src/styles/variables.scss' as *;
+
+.assign_employee_select {
+    display: flex;
+    width: 250px;
+    flex-shrink: 0;
+}

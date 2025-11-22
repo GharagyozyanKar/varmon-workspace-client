@@ -1,0 +1,12 @@
+@use "../../../../../styles/variables.scss" as *;
+
+.wrapper {
+    overflow-y: auto;
+    padding-right: 3px;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: $gap-md;
+    }
+}

@@ -1,0 +1,7 @@
+@use '/src/styles/variables.scss' as *;
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

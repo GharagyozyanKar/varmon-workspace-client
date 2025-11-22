@@ -1,0 +1,74 @@
+@use "/src/styles/variables.scss" as *;
+
+
+.filePicker {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: end;
+    gap: $gap-sm;
+    height: 100%;
+    width: 100%;
+
+    .actions {
+        display: flex;
+        gap: $gap-sm;
+
+        .fileInput {
+            display: none;
+        }
+
+        .selectFileButton {
+            display: flex;
+            align-items: center;
+            gap: $gap-sm;
+        }
+    }
+
+    .filePreview {
+        .fileItem {
+            background-color: $blue-bg;
+            padding: 5px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            gap: 5px;
+            border-radius: $border-radius-sm;
+
+            .fileInfo {
+                width: 90%;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                &>span {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+
+                .fileIcon {
+                    font-size: 18px;
+                    color: $grey;
+                    flex-shrink: 0;
+                }
+
+                .placeholder {
+                    color: $grey;
+                    font-style: italic;
+                }
+            }
+
+            .closeIcon {
+                font-size: 20px;
+                cursor: pointer;
+                transition: 0.2s;
+                color: $grey;
+
+                &:hover {
+                    color: $red;
+                }
+            }
+        }
+    }
+}

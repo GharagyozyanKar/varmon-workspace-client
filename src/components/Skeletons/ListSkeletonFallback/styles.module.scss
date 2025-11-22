@@ -1,0 +1,35 @@
+@use "/src/styles/variables.scss" as *;
+
+.wrapper {
+  height: 100%;
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-sm;
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .no_cases {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 250px;
+      color: $grey;
+    }
+
+    .cases {
+      max-height: 300px;
+      display: flex;
+      flex-direction: column;
+      gap: $gap-sm;
+      overflow-y: auto;
+      padding: $padding-sm;
+    }
+  }
+}
+

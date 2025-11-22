@@ -1,0 +1,58 @@
+@use "/src/styles/variables.scss" as *;
+
+.stats {
+    grid-area: stats;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+    gap: $gap-sm;
+    justify-content: space-between;
+    
+    .stats_item {
+        border-radius: $border-radius-sm;
+        background-color: $blue-dark;
+        color: $white;
+        padding: $padding-sm;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &.year {
+            background-color: $blue-light;
+        }
+
+        .header {
+            display: flex;
+
+            &_info {
+                display: flex;
+                align-items: center;
+                gap: $gap-sm;
+
+
+                &_icon {
+                    background-color: white;
+                    color: $blue-dark;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+
+            &_count {
+                font-weight: bold;
+                font-size: $font-size-lg;
+            }
+        }
+    }
+    
+}

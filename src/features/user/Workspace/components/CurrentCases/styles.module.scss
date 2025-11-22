@@ -1,0 +1,95 @@
+@use "/src/styles/variables.scss" as *;
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-md;
+}
+
+.cases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+    gap: $gap-md;
+    justify-content: start;
+    
+    .caseItem {
+        width: 250px;
+        min-height: 200px;
+        border-radius: $border-radius-sm;
+        padding: $padding-sm;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        display: flex;
+        flex-direction: column;
+        gap: $gap-md;
+        justify-content: space-between;
+        // transition: transform 0.2s ease;
+        // cursor: pointer;
+
+        // &:hover {
+        //     transform: translateY(-5px);
+        //     transition: transform 0.2s ease;
+        // }
+
+
+        .icon_wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+
+            
+            .icon {
+                font-size: 80px;
+                color: $blue-lightest;
+                transition: color 0.2s ease;
+                cursor: pointer;
+                &:hover {
+                    color: $blue-lighter;
+                }
+            }
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid $grey-light;
+            padding-bottom: $padding-sm;
+            .title {
+                font-weight: 700;
+                color: $blue-dark;
+            }
+        }
+
+
+        .footer {
+
+
+            .info {
+                display: flex;
+                gap: $gap-sm;
+
+                & > span:first-child {
+                    font-weight: 700;
+                    flex-shrink: 0;
+                }
+
+                & > span:last-child {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    min-width: 0;
+                }
+            }
+        }
+    }
+
+    .emptyState {
+
+        .emptyText {
+            font-size: 16px;
+            font-weight: 500;
+            color: $grey;
+        }
+    }
+}

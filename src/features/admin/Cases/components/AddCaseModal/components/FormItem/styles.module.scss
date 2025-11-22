@@ -1,0 +1,38 @@
+@use '/src/styles/variables.scss' as *;
+
+.item {
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  background-color: $blue-light;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  border-radius: $border-radius-sm;
+}
+
+.value {
+  margin-top: 4px;
+
+  >input {
+    padding: 5px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: $border-radius-sm;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+
+    &:focus {
+      border-color: $blue-light;
+      outline: none;
+    }
+  }
+}
+
+.field {
+  width: 100%;
+}

@@ -1,0 +1,40 @@
+@use '/src/styles/variables.scss' as *;
+
+
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 0;
+    position: relative;
+
+    th {
+        text-align: left;
+        padding: 15px;
+        background-color: $blue-lightest;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    tbody {
+        tr {
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 2px 5px;
+            background: #fff;
+            font-size: $font-size-sm;
+
+            td {
+                padding: 15px;
+            }
+        }
+    }
+}
+
+.no_cases {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    font-size: $font-size-lg;
+    color: $grey;
+}

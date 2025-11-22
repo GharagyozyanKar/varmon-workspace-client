@@ -1,0 +1,8 @@
+@use '/src/styles/variables.scss' as *;
+
+.main_info_fields {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: $gap-md;
+}
