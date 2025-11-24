@@ -12,7 +12,7 @@ const UserProfile = () => {
     const { data: statsData, loading: statsLoading } = useStats({ userId });
     const { data: yearlyCasesChartData, loading: yearlyCasesChartLoading } = useYearlyCasesChart({ userId });
     const { currentCases, currentCasesLoading, lastFiveClosedCases, lastFiveClosedCasesLoading } = useProfileCases({ userId });
-
+    
     return (
         <div className={styles.wrapper}>
             <Info user={userData}/>

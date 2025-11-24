@@ -3,8 +3,7 @@ import type { IUserProfileState } from "../types";
 import { getUserByIdThunk, getUserProfileCasesThunk, getUserStatsThunk, getUserYearlyCasesCountThunk } from "../thunks/profile.thunks";
 import type { Case, IStats, IYearlyData, User } from "../../types";
 import { sortCases } from "../../helpers/sorters";
-
-
+import { changeCaseStatusThunk } from "../thunks/cases.thunk";
 
 
 const initialState: IUserProfileState = {
@@ -66,6 +65,22 @@ const profileSlice = createSlice({
                 state.lastFiveClosedCases.data = sortCases(lastFiveClosedCases);
                 state.currentCases.loading = false;
                 state.lastFiveClosedCases.loading = false;
+            })
+            .addCase(changeCaseStatusThunk.fulfilled, (state, action) => {
+                const { case: filteredCase } = action.payload;
+
+                const current = state.currentCases.data.filter(item => item.id !== filteredCase.id);
+                const closed  = state.lastFiveClosedCases.data.filter(item => item.id !== filteredCase.id);
+
+                if (filteredCase.status === 'canceled' || filteredCase.status === 'closed') {
+                    closed.push(filteredCase);
+                    state.lastFiveClosedCases.data = sortCases(closed, "status");
+                    state.currentCases.data = current;
+                } else {
+                    current.push(filteredCase);
+                    state.currentCases.data = sortCases(current, "status");
+                    state.lastFiveClosedCases.data = closed;
+                }
             })
     }
 })
